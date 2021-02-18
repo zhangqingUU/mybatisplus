@@ -107,7 +107,7 @@ public class YxlxApplicationTests {
 
     @Test
     public void test10() {
-        //10、分页
+        //10、分页，补充说明：这个分页有bug，没有添加分页控制类MybatisPlusConfig，https://mp.baomidou.com/guide/page.html
         Page<User> userPage=new Page<>(1,3);
         userPage = userMapper.selectPage(userPage, null);
         List<User> records = userPage.getRecords();
